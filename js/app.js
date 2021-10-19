@@ -70,7 +70,7 @@ function distanceFromTop(depart){
 function makeActive () {
     for (section of department) {
       if ( distanceFromTop(section)){
-          if (section.classList.contains('your-active-class')){
+          if (!section.classList.contains('your-active-class')){
                 section.classList.add('your-active-class')
           }
         }else{
