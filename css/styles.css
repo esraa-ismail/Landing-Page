@@ -17,8 +17,8 @@ body {
     background: rgb(136,203,171);
     background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
     margin: 0;
-    font-family: 'Merriweather', serif;
     color: #fff;
+    position: relative;
 }
 
 
@@ -75,6 +75,9 @@ section {
 
 .navbar__menu li {
     display: inline-block;
+    width:100px;
+    height: 100px;
+    margin: 1%;
 }
 
 .navbar__menu .menu__link {
@@ -83,11 +86,19 @@ section {
     font-weight: bold;
     text-decoration: none;
     color: #000;
+    cursor: pointer;
 }
 
+.active-li {
+    background-color: rgba(0,13,60,1);
+    width: 100px;
+    height: 50px;
+    color: white;
+
+}
 .navbar__menu .menu__link:hover {
     background: #333;
-    color: #fff;
+    color: white;
     transition: ease 0.3s all;
 }
 
@@ -131,7 +142,28 @@ section:nth-of-type(even) .landing__container {
     margin-left: auto;
     text-align: right; 
 }
+.back-to-top {
+    width:50px;
+    height: 60px;
+    color: white;
+    background-color: turquoise;
+    text-decoration: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border: 1px solid black;
+    border-radius: 10%;
+    font-weight: bold;
+    font-size: 80;
+    text-align: -webkit-center;
+    margin: 1%;
+    cursor: pointer;
+    visibility: hidden;
 
+}
+.back-to-top:hover {
+    background-color: cornflowerblue;
+}
 /* Background Circles */
 /* Note that background circles are created with psuedo elements before and after */
 /* Circles appear to be random do to use of :nth-of-type psuedo class */
@@ -198,7 +230,7 @@ section:nth-of-type(3n + 1) .landing__container::after {
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 section.your-active-class {
     background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 3) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 section.your-active-class .landing__container::before {
