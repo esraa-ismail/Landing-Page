@@ -10,9 +10,7 @@
 
 
 /* ---- Base Rules ---- */
-html {
-    scroll-behavior: smooth;
-}
+
 body {
     background: rgb(136,203,171);
     background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
@@ -24,7 +22,6 @@ body {
 
 /* Typeography General*/
 h1 {
-    font-family: 'Fira Sans', sans-serif;
     font-size: 3em;
     margin: 2em 1rem;
 }
@@ -34,6 +31,7 @@ h1 {
         font-size: 7em;
         margin: 2em 4rem 1em;
     }
+   
 }
 
 h2 {
@@ -71,15 +69,26 @@ section {
     padding-left: 0;
     margin: 0;
     text-align: right;
+    width: 100%;
 }
+
 
 .navbar__menu li {
     display: inline-block;
     width:100px;
-    height: 100px;
     margin: 1%;
 }
-
+@media (max-width : 648px) {
+    .navbar__menu li {
+        width: 15%;
+        font-size: 70%;
+  }
+}
+@media (max-width: 370px) {
+    .navbar__menu li {
+        font-size: 40%;
+  }
+}
 .navbar__menu .menu__link {
     display: block;
     padding: 1em;
